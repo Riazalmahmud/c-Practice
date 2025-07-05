@@ -1,45 +1,23 @@
 ﻿using System;
-namespace TestDataTypeNamespace
+namespace TestDataImplicitConversionNamespace
 {
 
 
-    struct Employee
+    class TesImplicitConversion
     {
-        public double selary;
-        public double Id;
-
-}
-
-    class TestDataType
-    {
-
-        enum JobLevel { Intern, Junior, Mid, Senior, Manager }
-        enum UserType { user, manager, marketing, superAdmin }
+        private static object? f2;
 
         static void Main(string[] args)
         {
-            float gpa = 3.85f;
-            double distance = 384400.5;
-            decimal accountBalance = 15249.75m;
-            Console.WriteLine("Student GPA: " + gpa);
-            Console.WriteLine("Distance to Moon (km): " + distance);
-            Console.WriteLine("Bank Account Balance: $" + accountBalance);
-            Console.WriteLine("enum: $" + JobLevel.Intern);
-            Console.WriteLine("enum: $" + UserType.manager);
 
-            Employee em;
-            Object obj = 50000;
-            em.selary = 5000;
+            int nums = 2546;
+            double dobNum = nums;
+            Console.WriteLine(dobNum);
 
-            dynamic dynamic = 10;
-            Console.WriteLine("object is : $" + obj);
-            Console.WriteLine("dynamic object is : $" + dynamic);
-
-            string[] student = { "Abul", "Babul", "Cabul", "Dabul" };
-            foreach (string st in student)
-            {
-                Console.WriteLine("Student name: " + st);
-            }
+            // explicit conversion
+            double numsEX = 3.555;
+            int intNums = (int)numsEX;
+            Console.WriteLine($"explicit conversion number: {intNums:F2}");
 
         }
     }
